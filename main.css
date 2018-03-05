@@ -1,0 +1,258 @@
+:root{
+  margin:0;
+  padding:0;
+}
+
+body{
+  margin:0;
+  padding:0;
+  font-family:helvetica;
+}
+
+
+/* Header CSS starts here */
+header{
+  display:flex;
+  flex-direction: row;
+  width:100vw;
+  height:60px;
+  background:tomato;
+  align-items: center;
+  justify-content: space-around;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+header > div{
+  flex:1;
+  height:100%;
+  display: flex;
+  align-items: center;
+  padding:0 0.5em;
+}
+header img{
+  width:100px;
+  height:50px;
+  object-fit: cover;
+}
+
+header nav {
+  flex:3;
+  height:100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+header nav > a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color:white;
+  cursor:pointer;
+  padding:0 0.5em;
+}
+
+header nav > a:hover{
+  color:lightgrey;
+}
+
+
+@media only screen and (max-width: 570px) {
+  header nav > a:nth-child(2),header nav > a:nth-child(3){
+    display:none;
+  }
+}
+
+
+/* Header CSS ends here */
+
+
+/* Hero Css starts here */
+#Hero{
+  width:100vw;
+  background-image:
+  url('https://images.pexels.com/photos/875514/pexels-photo-875514.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb'),linear-gradient(black, black);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height:300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#Hero h2{
+  font-size:2em;
+}
+
+#Hero button{
+  font-size:1em;
+  background:gold;
+  border:none;
+  color:white;
+  padding:5px 10px;
+  border-radius: 10px;
+  min-width:120px;
+  height:30px;
+  cursor:pointer;
+}
+#Hero button:hover{
+  background:tomato;
+}
+
+/* Hero Css ends here */
+
+
+/* Description CSS starts here */
+#Description{
+  width:100vw;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#Description > div{
+ width:50vw;
+ height:300px;
+ display:flex;
+ justify-content: center;
+}
+#Description > div:nth-child(even){
+  background: tomato;
+}
+#Description > div:nth-child(odd){
+  background: gold;
+}
+
+#Description > div:first-child{
+  align-items: flex-start;
+}
+#Description > div:nth-child(2){
+  align-items: center;
+}
+
+#Description > div:nth-child(3){
+  align-items: flex-end;
+}
+
+#Description div > p{
+  font-size:2rem;
+  text-align: center;
+  color:white;
+}
+
+@media only screen and (max-width: 820px) {
+  #Description{
+    flex-direction: column;
+  }
+  #Description > div{
+    width:100vw;
+    height:150px;
+    align-items: center;
+  }
+  #Description > div > p{
+    align-self: center;
+  }
+}
+
+
+/* Description CSS ends here */
+
+
+
+/* Image CSS starts here */
+#Image{
+  width:100vw;
+}
+
+#Image > div:first-child{
+  background-image:url('https://images.pexels.com/photos/869258/pexels-photo-869258.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#Image > div:nth-child(2){
+  background-image:url('https://images.pexels.com/photos/887845/pexels-photo-887845.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#Image > div:nth-child(3){
+  background-image:url('https://images.pexels.com/photos/850797/pexels-photo-850797.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#Image > div:last-child{
+  background-image:url('https://images.pexels.com/photos/894570/pexels-photo-894570.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+/* Image CSS ends here */
+
+
+
+/* Footer CSS starts here */
+footer{
+  width:100vw;
+  background:darkblue;
+  height:100vh;
+}
+
+footer ul{
+  list-style: none;
+  margin:0;
+  padding:0;
+  height:100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer ul li{
+  width:100vw;
+  flex:1;
+  text-align: center;
+  font-size:150%;
+  color:white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+footer ul li:nth-child(even){
+  border:3px dotted white;
+}
+
+
+
+@media only screen and (min-width: 600px) {
+  footer ul{
+    flex-direction: row;
+  }
+  footer ul li{
+    border:3px dotted white;
+    height:100%;
+  }
+}
+
+
+/* Footer CSS ends here */
